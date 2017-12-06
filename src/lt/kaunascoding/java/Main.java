@@ -42,7 +42,7 @@ public class Main {
                     new StudentasInsert();
                     break;
                 case 2:
-                    new StudentasInsert();
+                    new AddressInsert();
                     break;
             }
         }

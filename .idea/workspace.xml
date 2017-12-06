@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59b2bf0f-ac72-4461-aabd-90cefccf4d87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/lt/kaunascoding/java/AddressInsert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java" afterPath="$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            <state relative-caret-position="527">
+              <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#144#159#0" expanded="false" />
@@ -30,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressInsert.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddressInsert.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/AddressInsert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            <state relative-caret-position="299">
+              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +72,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/lt/kaunascoding/java/StudentasInsert.java" />
-        <option value="$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java" />
         <option value="$PROJECT_DIR$/src/lt/kaunascoding/java/AddressInsert.java" />
+        <option value="$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java" />
       </list>
     </option>
   </component>
@@ -249,17 +246,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#144#159#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/StudentasInsert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -272,10 +258,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/AddressInsert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="299">
+          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lt/kaunascoding/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="44" column="39" lean-forward="false" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#144#159#0" expanded="false" />
           </folding>
         </state>
       </provider>
