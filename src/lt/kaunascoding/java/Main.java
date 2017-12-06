@@ -44,6 +44,9 @@ public class Main {
                 case 2:
                     new AddressInsert();
                     break;
+                case 3:
+                    new MarkInsert();
+                    break;
             }
         }
     }
@@ -54,6 +57,7 @@ public class Main {
         System.out.println("| 0 - Baigti programos darbą                     |");
         System.out.println("| 1 - Pridėti naują studentą                     |");
         System.out.println("| 2 - Pridėti naują adresa                       |");
+        System.out.println("| 3 - Pridėti naują pazymi                       |");
         System.out.println("|------------------------------------------------|");
     }
 }
