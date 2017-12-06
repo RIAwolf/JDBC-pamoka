@@ -23,21 +23,7 @@ public class MarkInsert {
         System.out.println("Iveskite dalyko pavadinima");
         title = skaitytuvas.nextLine();
 
-        boolean yraSkaicius = false;
-        while (yraSkaicius == false) {
-            System.out.println("Iveskite studento pazymi");
-            textMark = skaitytuvas.nextLine();
-
-            try {
-                mark = Integer.parseInt(textMark);
-                yraSkaicius = true;
-            } catch (Exception e) {
-
-                System.out.println("Ivestas ne skaicius");
-
-
-            }
-        }
+        mark = gaukPazimi(skaitytuvas);
 
 
         // atidarom prisijungima i duombaze
@@ -69,5 +55,25 @@ public class MarkInsert {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private int gaukPazimi(Scanner skaitytuvas){
+        boolean yraSkaicius = false;
+        String textMark="";
+        int mark =-1;
+        while (yraSkaicius == false) {
+            System.out.println("Iveskite studento pazymi");
+            textMark = skaitytuvas.nextLine();
+            try {
+                mark = Integer.parseInt(textMark);
+                yraSkaicius = true;
+            } catch (Exception e) {
+
+                System.out.println("Ivestas ne skaicius");
+
+
+            }
+        }
+        return mark;
     }
 }
