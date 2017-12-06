@@ -41,6 +41,9 @@ public class Main {
                 case 1:
                     new StudentasInsert();
                     break;
+                case 2:
+                    new StudentasInsert();
+                    break;
             }
         }
     }
@@ -50,6 +53,7 @@ public class Main {
         System.out.println("| Sveiki, pasirinkite kokį veiksmą norite atlikti|");
         System.out.println("| 0 - Baigti programos darbą                     |");
         System.out.println("| 1 - Pridėti naują studentą                     |");
+        System.out.println("| 2 - Pridėti naują adresa                       |");
         System.out.println("|------------------------------------------------|");
     }
 }
