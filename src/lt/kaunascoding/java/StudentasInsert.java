@@ -1,9 +1,13 @@
 package lt.kaunascoding.java;
 
+import lt.kaunascoding.java.db.DBVeiksmai;
+
 import java.util.Scanner;
 import java.sql.*;
+
 public class StudentasInsert {
-    public StudentasInsert(){
+    public StudentasInsert() {
+        DBVeiksmai veiksmai = new DBVeiksmai();
         // susikuriam kintamuosius laikyti informacijai
         String name;
         String surname;
@@ -14,46 +18,29 @@ public class StudentasInsert {
 
         // paprasom vartotojo ivesti informacija
         System.out.println("Iveskite studento vardą");
-        name=skaitytuvas.nextLine();
+        name = skaitytuvas.nextLine();
         System.out.println("Iveskite studento pavardę");
-        surname=skaitytuvas.nextLine();
+        surname = skaitytuvas.nextLine();
         System.out.println("Iveskite studento telefono nr.");
-        phone=skaitytuvas.nextLine();
+        phone = skaitytuvas.nextLine();
         System.out.println("Iveskite studento el. paštą");
-        email=skaitytuvas.nextLine();
-
-        // atidarom prisijungima i duombaze
+        email = skaitytuvas.nextLine();
+        Object[] parametrai = {
+                name,
+                surname,
+                phone,
+                email
+        };
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kcs", "root", "");
-            Statement statement = connection.createStatement();
-            // patikrinti ar toks studentas egzistuoja duombazeje
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM `students` WHERE `name` = '"+name+"' AND `surname` = '"+surname+"'");
-            if(resultSet.next()== true){
-                // jei egzistuoja, rasyti pranesima
-                System.out.println("Studentas su tokiu vardu ir pavarde jau įvestas");
-            }else{
-                // jei neegzistuoja tiesiog ikelti
-                statement.execute("INSERT INTO `students` " +
-                        "(`id`, `name`, `surname`, `phone`, `email`) " +
-                        "VALUES " +
-                        "(NULL, '"+name+"', '"+surname+"', '"+phone+"', '"+email+"')" +
-                        ";");
+            ResultSet rezultatas = veiksmai.ivykdykUzklausa("SELECT * FROM `students` WHERE `name` = '" + name + "' AND `surname` = '" + surname + "'");
+            if (rezultatas.next()) {
+                System.out.println("Toks studentas jau ivestas");
+            } else {
+                veiksmai.paruoskUzklausa("INSERT INTO `students` (`id`, `name`, `surname`, `phone`, `email`) VALUES (NULL, ?, ?, ?, ?)", parametrai);
             }
-
-
-
-
-
-            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
 
     }
 }

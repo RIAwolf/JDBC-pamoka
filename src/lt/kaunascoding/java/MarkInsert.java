@@ -9,12 +9,10 @@ public class MarkInsert {
         String name;
         String surname;
         String title;
-        int mark = -1;
-        String textMark;
+        int mark;
 
         // susikuriam skaitytuva
         Scanner skaitytuvas = new Scanner(System.in);
-
         // paprasom vartotojo ivesti informacija
         System.out.println("Iveskite studento vardą");
         name = skaitytuvas.nextLine();
@@ -24,7 +22,6 @@ public class MarkInsert {
         title = skaitytuvas.nextLine();
 
         mark = gaukPazimi(skaitytuvas);
-
 
         // atidarom prisijungima i duombaze
         try {
@@ -68,10 +65,7 @@ public class MarkInsert {
                 mark = Integer.parseInt(textMark);
                 yraSkaicius = true;
             } catch (Exception e) {
-
                 System.out.println("Ivestas ne skaicius");
-
-
             }
         }
         return mark;

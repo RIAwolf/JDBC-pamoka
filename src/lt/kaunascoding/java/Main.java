@@ -1,6 +1,8 @@
 package lt.kaunascoding.java;
 
 
+import lt.kaunascoding.java.db.DBVeiksmai;
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -18,6 +20,7 @@ public class Main {
 //            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kcs", "root", "");
 //            Statement statement = connection.createStatement();
 //            ResultSet resultSet = statement.executeQuery("SELECT * FROM `students` ORDER BY `name` ASC;");
+//            int i =0;
 //            while (resultSet.next()) {
 //                System.out.print(resultSet.getInt("id") + "\t");
 //                System.out.print(resultSet.getString("name") + "\t");
@@ -25,12 +28,17 @@ public class Main {
 //                System.out.print(resultSet.getString("phone") + "\t");
 //                System.out.print(resultSet.getString("email") + "\t");
 //                System.out.print("\n");
-//
+//                i++;
+//            }
+//            if(i==0){
+//                System.out.println("Studentu lentele tuscia");
 //            }
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
         Main programa = new Main();
+
+
         Scanner skaitytuvas = new Scanner(System.in);
         while (true) {
             programa.rodykMeniu();
