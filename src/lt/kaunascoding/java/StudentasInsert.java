@@ -31,16 +31,14 @@ public class StudentasInsert {
                 phone,
                 email
         };
-        try {
-            ResultSet rezultatas = veiksmai.ivykdykUzklausa("SELECT * FROM `students` WHERE `name` = '" + name + "' AND `surname` = '" + surname + "'");
-            if (rezultatas.next()) {
-                System.out.println("Toks studentas jau ivestas");
-            } else {
-                veiksmai.paruoskUzklausa("INSERT INTO `students` (`id`, `name`, `surname`, `phone`, `email`) VALUES (NULL, ?, ?, ?, ?)", parametrai);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        int id = veiksmai.duokStudentoID(name, surname);
+        if (id != -1) {
+            System.out.println("Toks studentas jau ivestas");
+        } else {
+            veiksmai.paruoskUzklausa("INSERT INTO `students` (`id`, `name`, `surname`, `phone`, `email`) VALUES (NULL, ?, ?, ?, ?)", parametrai);
         }
+
 
     }
 }

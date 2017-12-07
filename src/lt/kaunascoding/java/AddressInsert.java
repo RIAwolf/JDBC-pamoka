@@ -1,5 +1,7 @@
 package lt.kaunascoding.java;
 
+import lt.kaunascoding.java.db.DBVeiksmai;
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -30,25 +32,17 @@ public class AddressInsert {
         postcode = skaitytuvas.nextLine();
 
         // atidarom prisijungima i duombaze
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        DBVeiksmai veiksmai = new DBVeiksmai();
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kcs", "root", "");
             Statement statement = connection.createStatement();
-            // patikrinti ar toks studentas egzistuoja duombazeje
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM `students` " +
-                    "WHERE `name` = '" + name + "' AND `surname` = '" + surname + "'");
-            if (resultSet.next() == true) {
-                // jei egzistuoja, irasyti informacija
-                int studentID = resultSet.getInt("id");
+            int id =veiksmai.duokStudentoID(name,surname);
+            if (id!=-1) {
 
                 statement.execute("INSERT INTO `student_address` " +
                         "(`id`, `student_id`, `country`, `city`, `street`, `postcode`)" +
                         " VALUES " +
-                        "(NULL, '" + studentID + "', '" + country + "', '" + city + "', '" + street + "', '" + postcode + "')"
+                        "(NULL, '" + id + "', '" + country + "', '" + city + "', '" + street + "', '" + postcode + "')"
                 );
             } else {
                 // jei neegzistuoja parasyti kad toks studentas nerastas

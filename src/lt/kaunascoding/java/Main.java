@@ -1,9 +1,6 @@
 package lt.kaunascoding.java;
 
 
-import lt.kaunascoding.java.db.DBVeiksmai;
-
-import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
